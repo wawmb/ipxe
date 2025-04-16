@@ -1,0 +1,8 @@
+# apt install tftpd-hpa
+# cat /etc/default/tftpd-hpa
+# systemctl restart tftpd-hpa
+
+TFTP_USERNAME="tftp"
+TFTP_DIRECTORY="/data/xspeed/share/tftp"
+TFTP_ADDRESS=":69"
+TFTP_OPTIONS="-l -c -s -vv"
