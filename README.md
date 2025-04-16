@@ -39,7 +39,13 @@ iPXE 是领先的开源网络启动固件。它提供了一个完整的 PXE 实�
 #define	CONSOLE_FRAMEBUFFER	/* Graphical framebuffer console */
 ```
 
-## 修改编译项
+- src/config/local/settings.h (仅支持X86)
+
+```
+#define CPUID_SETTINGS        /* CPUID settings */
+```
+
+## 编译命令
 
 - ARM架构编译
 
