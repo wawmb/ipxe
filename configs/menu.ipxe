@@ -104,7 +104,7 @@ goto start
 echo Booting OpenWrt-X 1907 for D2000
 kernel ${http-url}/platform/linux4197_d2000-glibc/vmlinux
 initrd ${http-url}/platform/linux4197_d2000-glibc/cpio.gz
-imgargs vmlinux console=ttyAMA0,115200 rw rootwait factory_env
+imgargs vmlinux initrd=cpio.gz console=ttyAMA0,115200 rw rootwait factory_env
 boot || goto failed_boot
 
 # 启动 E2000 OpenWrt-X
@@ -112,7 +112,7 @@ boot || goto failed_boot
 echo Booting OpenWrt-X 1907 for E2000
 kernel ${http-url}/platform/linux419246_e2000-glibc/vmlinux
 initrd ${http-url}/platform/linux419246_e2000-glibc/cpio.gz
-imgargs vmlinux console=ttyAMA1,115200 rw rootwait factory_env
+imgargs vmlinux initrd=cpio.gz console=ttyAMA1,115200 rw rootwait factory_env
 boot || goto failed_boot
 
 ########################## UNUSED MENU ITEMS ##########################
